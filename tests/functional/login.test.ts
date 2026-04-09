@@ -1,6 +1,5 @@
-import { test, expect, Page } from "@playwright/test";
-import { LoginPage } from "../pages/loginPage";
-import { log } from "node:console";
+import { test } from "@playwright/test";
+import { LoginPage } from "../../pages/loginPage";
 
 test("Sign up", async ({ page, baseURL, context }) => {
   const login = new LoginPage(page, context);
@@ -15,6 +14,4 @@ test("Sign up", async ({ page, baseURL, context }) => {
     await login.fillFirstName();
     await login.setGoal();
   });
-
-  //await test.step
 });
